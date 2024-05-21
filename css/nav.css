@@ -1,0 +1,12 @@
+.bg-custom-dark{
+    background-color: var(--eerie-black-4);
+}
+
+.item-nav:hover{
+    color:  hsl(38, 61%, 73%) !important;
+}
+
+header nav{
+    height: 90px;
+}
+

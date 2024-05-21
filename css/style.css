@@ -1,0 +1,864 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+
+    /* Cores */
+    --gold-crayola: hsl(38, 61%, 73%);
+    --quick-silver: hsla(0, 0%, 65%, 1);
+    --davys-grey: hsla(30, 3%, 34%, 1);
+    --smoky-black-1: hsla(40, 12%, 5%, 1);
+    --smoky-black-2: hsla(30, 8%, 5%, 1);
+    --smoky-black-3: hsla(0, 3%, 7%, 1);
+    --eerie-black-1: hsla(210, 4%, 9%, 1);
+    --eerie-black-2: hsla(210, 4%, 11%, 1);
+    --eerie-black-3: hsla(180, 2%, 8%, 1);
+    --eerie-black-4: rgba(33, 33, 33, 0.973);
+    --white: hsla(0, 0%, 100%, 1);
+    --white-alpha-20: hsla(0, 0%, 100%, 0.2);
+    --white-alpha-10: hsla(0, 0%, 100%, 0.1);
+    --black: hsla(0, 0%, 0%, 1);
+    --black-alpha-80: hsla(0, 0%, 0%, 0.8);
+    --black-alpha-15: hsla(0, 0%, 0%, 0.15);
+
+    /* Gradiente */
+    --loading-text-gradient: linear-gradient(90deg, transparent 0% 16.66%, var(--smoky-black-3) 33.33% 50%, transparent 66.66% 75%);
+    --gradient-1: linear-gradient(to top, hsla(0, 0%, 0%, 0.9), hsla(0, 0%, 0%, 0.7), transparent);
+
+
+    /* Fontes */
+
+    /* font-family */
+    --fontFamily-forum: 'Forum', cursive;
+    --fontFamily-dm_sans: 'DM Sans', sans-serif;
+
+    /* font-size */
+    --fontSize-display-1: calc(1.3rem + 6.7vw);
+    --fontSize-headline-1: calc(2rem + 2.5vw);
+    --fontSize-headline-2: calc(1.3rem + 2.4vw);
+    --fontSize-title-1: calc(1.6rem + 1.2vw);
+    --fontSize-title-2: 2.2rem;
+    --fontSize-title-3: 2.1rem;
+    --fontSize-title-4: calc(1.6rem + 1.2vw);
+    --fontSize-body-1: 2.4rem;
+    --fontSize-body-2: 1.6rem;
+    --fontSize-body-3: 1.8rem;
+    --fontSize-body-4: 1.6rem;
+    --fontSize-label-1: 1.4rem;
+    --fontSize-label-2: 1.2rem;
+
+    /* font-weight */
+    --weight-regular: 400;
+    --weight-bold: 700;
+
+    /* line-height */
+    --lineHeight-1: 1em;
+    --lineHeight-2: 1.2em;
+    --lineHeight-3: 1.5em;
+    --lineHeight-4: 1.6em;
+    --lineHeight-5: 1.85em;
+    --lineHeight-6: 1.4em;
+
+    /* letter-spacing */
+    --letterSpacing-1: 0.15em;
+    --letterSpacing-2: 0.4em;
+    --letterSpacing-3: 0.2em;
+    --letterSpacing-4: 0.3em;
+    --letterSpacing-5: 3px;
+
+    /* Espaçamento */
+
+    --section-space: 70px;
+
+    /* Sombra */
+
+    --shadow-1: 0px 0px 25px 0px hsla(0, 0%, 0%, 0.25);
+
+    /**
+     * BORDER RADIUS
+     */
+
+    --radius-24: 24px;
+    --radius-circle: 50%;
+
+    /**
+     * TRANSITION
+     */
+
+    --transition-1: 250ms ease;
+    --transition-2: 500ms ease;
+    --transition-3: 1000ms ease;
+
+}
+
+/* Reset CSS */
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    /* Adiciona box-sizing para facilitar o cálculo de tamanhos */
+}
+
+/* Adiciona estilos específicos para elementos HTML */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Remove decoração de links */
+a {
+    text-decoration: none !important;
+    color: inherit;
+    /* Garante que a cor do link seja herdada */
+}
+
+/* Reset para listas */
+ol,
+ul {
+    list-style: none;
+}
+
+/* Adiciona padding e margin padrão */
+body {
+    line-height: 1;
+}
+
+/* Limpa elementos com conteúdo inserido pelo usuário */
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* Define o comportamento padrão para elementos com focus */
+button,
+input,
+select,
+textarea {
+    font-size: inherit;
+    outline: none;
+    /* Remove outline padrão */
+}
+
+/* Limpa elementos de tabela */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Adiciona estilos básicos para a tag <body> */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: var(--lineHeight-5);
+    color: white;
+    background-color: var(--eerie-black-1);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    outline: none;
+}
+
+
+
+/* Corrige problemas de dimensionamento em alguns navegadores */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    position: relative;
+    padding-block: 100px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.section-dark {
+    background-color: var(--smoky-black-2);
+}
+
+.section-subtitle::after {
+    content: url(../img/separator.svg);
+    display: block;
+    width: 100px;
+    margin-inline: auto;
+    margin-block-start: 2px;
+}
+
+.link-underline {
+    text-decoration: none;
+    /* Remove o sublinhado inicial */
+    position: relative;
+    /* Permite posicionar os elementos ::after */
+    display: inline-block;
+    /* Garante que o link tenha apenas o tamanho do conteúdo */
+}
+
+.link-underline::after,
+.link-underline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    /* Inicia no meio */
+    bottom: 1px;
+    /* Ajuste conforme necessário para a posição das linhas */
+    width: 0;
+    /* Começa sem largura */
+    height: 1px;
+    /* Espessura das linhas */
+    background-color: var(--gold-crayola);
+    /* Cor das linhas */
+    transition: width 0.5s, left 0.5s;
+    /* Adiciona uma transição para o efeito de aparecimento gradual */
+}
+
+.link-underline::before {
+    left: 50%;
+    /* Inicia no meio */
+}
+
+.link-underline:hover::after,
+.link-underline:hover::before {
+    width: calc(100% - 2px);
+    /* Ajusta a largura das linhas para 100% menos a borda */
+    left: 0;
+    /* Move as linhas para a esquerda */
+}
+
+.headline-1 {
+    font-size: 46px;
+}
+
+.borda {
+    padding: 12px 8px;
+    border: 1px solid;
+}
+
+
+.section-subtitle {
+    position: relative;
+    color: var(--gold-crayola);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: var(--letterSpacing-2);
+    margin-block-end: 12px;
+}
+
+
+/* Adicione seus próprios estilos personalizados abaixo deste ponto */
+
+.logo {
+    height: 65px;
+}
+
+
+
+.meu-btn {
+    background-color: hsl(38, 61%, 73%);
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    border: 2px solid hsl(38, 61%, 73%);
+    padding: 12px 40px;
+    overflow: hidden;
+    transition: 300ms ease;
+    border-radius: 6px;
+}
+
+.meu-btn:hover {
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.hero {
+    height: 880px;
+}
+
+.text-hero {
+    font-size: calc(1rem + 6vw);
+    line-height: var(--lineHeight-1);
+}
+
+.carousel-caption {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 15% !important;
+    gap: 32px;
+}
+
+/* Estilizando os botões de navegação do carrossel */
+.btn-carrossel {
+    position: absolute;
+    top: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    /* Remova a cor de fundo */
+    border: 2px solid hsl(38, 61%, 73%);
+    /* Remova a borda */
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    color: hsl(38, 61%, 73%);
+    transition: color 0.3s ease;
+
+
+}
+
+.btn-anterior {
+    left: 5%;
+    padding-right: 2.5px;
+}
+
+.btn-sucessor {
+    right: 5%;
+    padding-left: 2.5px;
+}
+
+/* Estilizando os botões de navegação ao passar o mouse */
+.btn-carrossel:hover {
+    background-color: hsl(38, 61%, 73%);
+    color: black;
+    /* Altere a cor ao passar o mouse */
+}
+
+
+.conteudo-categoria {
+    text-align: center;
+    background-color: var(--smoky-black-2);
+}
+
+.section-title {
+    margin-block-end: 16px;
+    font-size: calc(1rem + 2.5vw);
+    font-weight: 400;
+    line-height: 1.2em;
+}
+
+.section-text {
+    max-width: 420px;
+    margin-inline: auto;
+    margin-block-end: 75px;
+}
+
+.grid-item:nth-child(1) {
+    transform: translateY(-130px);
+}
+
+.grid-item:nth-child(3) {
+    transform: translateY(-130px);
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    transition: 500ms ease;
+}
+
+.grid-item img:hover {
+    transform: scale(1.1);
+    overflow: hidden;
+}
+
+
+.row {
+    gap: 100px;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(7%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
+.img-fundo1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -9999;
+    animation: floatUp 3s ease-in-out infinite alternate;
+}
+
+.img-fundo2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -9999;
+    animation: floatUp 3s ease-in-out infinite alternate;
+}
+
+.img-fundo3 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -9999;
+    animation: floatUp 3s ease-in-out infinite alternate;
+}
+
+.grid-text {
+    padding-block-end: 4px;
+    margin-inline: auto;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.grid-text2 {
+    color: var(--gold-crayola);
+    padding-block-end: 4px;
+    margin-inline: auto;
+    text-transform: uppercase;
+    transition: var(--transition-1);
+    font-weight: var(--weight-bold);
+    font-size: 12.5px;
+}
+
+.img-holder {
+    overflow: hidden;
+    transition: var(--transition-2);
+}
+
+.container-about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+}
+
+.about-figure {
+    position: relative;
+}
+
+.about-figure img {
+    width: 520px;
+    height: 570px;
+
+}
+
+.about-content {
+    text-align: center;
+    max-width: 470px;
+}
+
+.about-title {
+    color: var(--gold-crayola);
+    margin-bottom: 20px;
+}
+
+.about-phrase {
+    font-size: 40px;
+    margin-bottom: 20px;
+    line-height: 38px;
+}
+
+.about-text {
+    padding-bottom: 20px;
+}
+
+.num {
+    color: var(--gold-crayola);
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+
+
+.menu-text {
+    text-align: center;
+}
+
+.grid-list {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    gap: 40px;
+    position: relative;
+    column-gap: 90px;
+    gap: 55px 200px;
+    margin-block-end: 55px;
+}
+
+.menu-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.menu-card .card-banner {
+    flex-shrink: 0;
+    border-radius: var(--radius-24);
+}
+
+.menu-card .title-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.title-3 {
+    font-size: 20px;
+}
+
+.menu-card .span {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    color: var(--gold-crayola);
+    margin-block: 10px;
+}
+
+.title-2 {
+    font-size: 18px;
+}
+
+.menu-card .span::before {
+    content: "";
+    height: 6px;
+    flex-grow: 1;
+    border-block: 1px solid var(--white-alpha-20);
+}
+
+.menu-card .card-text {
+    color: var(--quick-silver);
+    line-height: var(--lineHeight-4);
+}
+
+.label-1 {
+    font-size: 16px;
+}
+
+.menu-text .section-title {
+    margin-block-end: 40px;
+}
+
+.section-menu .meu-btn {
+    margin-inline: auto;
+    margin-block-start: 26px;
+}
+
+
+
+.reservation-form {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    background-color: black;
+}
+
+
+.form-text {
+    margin-block-end: 40px;
+}
+
+.link {
+    display: inline;
+    color: var(--gold-crayola) !important;
+}
+
+.form-right .headline-1 {
+    margin-block-end: 40px;
+}
+
+.form-right .contact-label {
+    margin-block-end: 5px;
+}
+
+.form-right .separator {
+    margin: 20px auto;
+}
+
+.form-right .body-4 {
+    color: var(--quick-silver);
+    line-height: var(--lineHeight-3);
+}
+
+.form-right {
+    background-color: var(--eerie-black-4);
+}
+
+.form-right .body-4:not(:last-child) {
+    margin-block-end: 25px;
+}
+
+.form-left,
+.form-right {
+    padding: 75px 60px;
+}
+
+.input-field[type="date"] {
+    text-transform: uppercase;
+    padding-inline-end: 10px;
+}
+
+.input-field[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+textarea.input-field {
+    resize: none;
+    height: 140px;
+    padding-block: 20px;
+    line-height: var(--lineHeight-1);
+}
+
+.input-field {
+    background-color: var(--eerie-black-2);
+    color: var(--white);
+    height: 56px;
+    padding: 10px 20px;
+    border: 1px solid var(--white-alpha-10);
+    margin-block-end: 20px;
+    outline: none;
+    transition: border-color var(--transition-2);
+}
+
+.input-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+
+@media (min-width: 768px) {
+
+    .input-wrapper:nth-child(4) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.reservation .input-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+
+.title-reservation {
+    margin-block-end: 30px;
+}
+
+.form-left .btn {
+    max-width: 100%;
+    width: 100%;
+}
+
+.form-right {
+    background-repeat: repeat;
+    background-position: top left;
+}
+
+.text-form {
+    margin-block-end: 40px;
+}
+
+
+
+.input-field {
+    background-color: var(--eerie-black-2);
+    color: var(--white);
+    height: 56px;
+    padding: 10px 20px;
+    border: 1px solid var(--white-alpha-10);
+    margin-block-end: 20px;
+    outline: none;
+    transition: border-color var(--transition-2);
+}
+
+.icon-wrapper {
+    position: relative;
+    margin-block-end: 20px;
+}
+
+.icon-wrapper ion-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    --ionicon-stroke-width: 50px;
+    pointer-events: none;
+}
+
+.icon-wrapper ion-icon:last-child {
+    right: 10px;
+}
+
+.btn-center {
+    text-align: center;
+}
+
+
+
+ul {
+    list-style: none;
+}
+
+.btn-login {
+    background-color: hsl(38, 61%, 73%);
+    transition: 200ms;
+
+
+}
+
+.btn-login:hover {
+    background-color: hsl(38, 69%, 65%);
+    scale: 1.1;
+}
+
+
+
+.box {
+    color: red;
+    opacity: 1;
+}
+
+.h1-cadastro::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: var(--gold-crayola);
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.h1-login::after {
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 0.3rem;
+    background-color: var(--gold-crayola);
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+
+}
+
+.h1-recuperar::after {
+    content: '';
+    display: block;
+    width: 8rem;
+    height: 0.3rem;
+    background-color: var(--gold-crayola);
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+
+}

@@ -1,0 +1,158 @@
+<!-- resources/views/layout.blade.php -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seu Restaurante</title>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header></header>
+  <main>
+
+    <div class="font-sans text-gray-900 antialiased">
+
+      <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-white-100">
+
+
+        <div><a href="index.html">
+            <img src="img/logo.png" alt="">
+          </a></div>
+
+        <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
+          <h1 class="h1-login" style="font-size: 2.5rem;">Entrar</h1>
+
+          <form class="max-w-md mx-auto mt-8">
+
+            <div class="mb-4">
+              <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+              <input id="email"
+                class="borda border-gray-300 focus:border-yellow-300 focus:ring-yellow-300 rounded-md shadow-sm block mt-1 w-full"
+                type="email" name="email" required autofocus autocomplete="username">
+            </div>
+
+            <div class="mb-4">
+              <label for="password" class="block text-sm font-medium text-gray-700">Senha</label>
+              <input
+                class="borda border-gray-300 focus:border-yellow-300 focus:ring-yellow-300 rounded-md shadow-sm block mt-1 w-full"
+                id="password" type="password" name="password" required="required" autocomplete="current-password">
+            </div>
+
+            <div class="mb-4 flex items-center">
+              <input id="remember_me" type="checkbox"
+                class="h-4 w-4 text-yellow-500 focus:ring-yellow-500 border-gray-300 rounded" name="remember">
+              <label for="remember_me" class="ml-2 block text-sm text-gray-900">Lembre de Mim</label>
+            </div>
+
+
+
+
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col">
+                <a href="cadastro.html"
+                class="text-sm text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 mb-2">Criar conta</a>
+
+                <a href="recuperar.html"
+                class="text-sm text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 ">Esqueceu
+                sua senha?</a>
+
+              </div>
+              <button type="submit"
+                class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-gray focus:outline-none focus:ring-2 focus:ring-offset-2 btn-login">
+                Entrar
+              </button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer section-dark">
+    <div class="container">
+
+      <div class="row">
+        <div class="footer-col">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="index.html#about">Sobre nós</a></li>
+            <li><a href="index.html#menu">Cardápio</a></li>
+            <li><a href="index.html#reservation">Reserva</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Horários</h4>
+          <ul>
+            <li>
+              <h5>Café da Manhã:</h5>
+              <p>De Segunda A Domingo
+                07:00 às 10:30 horas</p>
+            </li>
+            <li>
+              <h5>Almoço:</h5>
+              <p>De Segunda A Domingo
+                11:00 às 15:00 horas</p>
+            </li>
+            <li>
+              <h5>Jantar:</h5>
+              <p>De Segunda A Domingo
+                17:00 às 22:00 horas</p>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="footer-col">
+          <h4>Reservas</h4>
+          <ul>
+            <li>
+              <h5>Contate-nos:</h5><a href="#about">(21)99999-8888</a>
+            </li>
+            <li>
+              <h5>Localização:</h5>
+              <p>Av. Paris, 84 - Bonsucesso, Rio de Janeiro - RJ, 21041-020</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>
+            Siga-nos:</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.x.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <iframe width="100%"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14705.007942529262!2d-43.2535559!3d-22.8671481!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997c03b24d186f%3A0xf3dd300862682520!2sUniversidade%20Augusto%20Motta%20-Unisuam%20(Bonsucesso%20)!5e0!3m2!1spt-BR!2sbr!4v1713382299346!5m2!1spt-BR!2sbr"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+
+</html>
