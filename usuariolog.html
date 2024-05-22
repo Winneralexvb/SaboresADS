@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Restaurante</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+
+
+</head>
+
+<body class="bg-gray-100">
+    <header class="fixed top-0 w-full z-50 bg-custom-dark">
+        <nav class="mx-auto flex max-w-9xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <div class="flex lg:flex-1">
+                <a href="index.html" class="-m-1.5 p-1.5">
+                    <img class="logo" src="img/logo.png" alt="">
+                </a>
+            </div>
+            </div>
+
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                <div class="flex gap-4">
+                    <a href="login.html" class="text-18px font-semibold leading-6 text-white"> <span
+                            aria-hidden="true"><i class="fas fa-user"></i> Entrar</a>
+
+                    <a href="cadastro.html" class="text-18px font-semibold leading-6 text-white"> <span
+                            aria-hidden="true">
+                            Cadastrar</a>
+                </div>
+            </div>
+
+
+            </div>
+            </div>
+            </div>
+            <link href="{{ asset('css/nav-2.css') }}" rel="stylesheet">
+            <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+            </div>
+    </header>
+
+    <main>
+        <div class="font-sans text-gray-900 antialiased">
+            <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-white-100">
+                <div class="container mx-auto mt-8">
+                    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                        <h2 class="text-2xl font-semibold mb-4">Consulta de Usuário</h2>
+                        <form id="consulta-form">
+                            <div class="mb-4">
+                                <label for="nome" class="block text-gray-700 text-sm font-bold mb-2">Nome:</label>
+                                <input type="text" id="nome" name="nome" placeholder="Nome do usuário"
+                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                                <input type="email" id="email" name="email" placeholder="Email do usuário"
+                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            </div>
+                            <button type="submit"
+                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Buscar</button>
+                        </form>
+                        <div id="resultado-consulta" class="mt-4">
+                            <h3 class="text-lg font-semibold mb-2">Resultados da Consulta</h3>
+                            <div class="overflow-x-auto">
+                                <table class="table-auto w-full">
+                                    <thead>
+                                        <tr>
+                                            <th class="px-4 py-2">Nome</th>
+                                            <th class="px-4 py-2">Email</th>
+                                            <th class="px-4 py-2">Reservas</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="border px-4 py-2">João da Silva</td>
+                                            <td class="border px-4 py-2">joao@example.com</td>
+                                            <td class="border px-4 py-2">2024-05-15</td>
+                                            <td class="border px-4 py-2 flex justify-between">
+                                                <button class="text-blue-500 hover:text-blue-700">Editar</button>
+                                                <button class="text-red-500 hover:text-red-700">Excluir</button>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="border px-4 py-2">Maria Souza</td>
+                                            <td class="border px-4 py-2">maria@example.com</td>
+                                            <td class="border px-4 py-2">2024-05-20</td>
+                                            <td class="border px-4 py-2 flex justify-between">
+                                                <button class="text-blue-500 hover:text-blue-700">Editar</button>
+                                                <button class="text-red-500 hover:text-red-700">Excluir</button>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+
+</html>

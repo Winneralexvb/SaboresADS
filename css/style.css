@@ -737,13 +737,6 @@ textarea.input-field {
     column-gap: 20px;
 }
 
-@media (min-width: 768px) {
-
-    .input-wrapper:nth-child(4) {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 .reservation .input-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -860,5 +853,29 @@ ul {
     margin: 0 auto;
     position: absolute;
     border-radius: 10px;
+
+}
+
+@media (min-width: 768px) {
+
+    .input-wrapper:nth-child(4) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        justify-items: center;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .grid-item img {
+        width: 50%;
+        height: 50%;;
+    }
 
 }

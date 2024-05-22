@@ -1,0 +1,92 @@
+#container-1 {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+    background-color: white;
+    width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 6px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tab-btn {
+    width: 100%;
+    border: none;
+    color: #020617;
+    border-radius: 8px 8px 0px 0px;
+    font-weight: 500;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.tab-btn.active {
+    background-color: hsl(38, 61%, 73%) ;
+
+}
+
+.tab-btn:hover {
+    background-color: hsl(38, 61%, 73%);
+}
+
+.content {
+    display: none;
+}
+
+.content.show {
+    color: black !important;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    border-radius: 0px 0px 8px 8px;
+    padding: 16px;
+}
+
+.nova-reserva{
+    display: inline-block;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    background-color: blue;
+    padding: .375rem .75rem;
+    border-radius: .50rem;
+    border: 1.5px solid transparent;
+    transition: 0.5s ease;
+
+}
+
+.nova-reserva:hover{
+    background-color: transparent;
+    border-radius: .50rem;
+    border: 1.5px solid blue;
+    color: #020617;
+}
+
+.content-img {
+    width: 50%;
+    height: 250px;
+}
+
+.card-reserva{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: whitesmoke;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 22px;
+}
+
+.card-content{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
